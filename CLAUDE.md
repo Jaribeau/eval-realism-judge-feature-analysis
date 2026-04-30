@@ -11,7 +11,7 @@ Systematic decomposition of what Petri's LLM realism judge responds to.
 
 ## Working with markdown docs
 
-The `docs/` directory contains research notes that the user edits in parallel with Claude. To prevent overwriting the user's in-progress edits, follow these rules for any `.md` file under `docs/` (and for `project-plan.md`, `README.md`, and any other markdown in the repo root):
+The `docs/` directory and `plans/` directory contain files the user edits in parallel with Claude. To prevent overwriting the user's in-progress edits, follow these rules for any `.md` file under `docs/` or `plans/` (and for `project-plan.md`, `README.md`, and any other markdown in the repo root):
 
 1. **Never use the `Write` tool on existing markdown files.** Use `Edit` only. `Write` on a file you read minutes ago will silently clobber any edits the user made in the meantime. `Write` is ok for new files.
 2. **Re-`Read` immediately before any `Edit`.** Even if you read the file earlier in the conversation, read it again right before editing so your `old_string` matches what's actually on disk.

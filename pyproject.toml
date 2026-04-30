@@ -1,0 +1,8 @@
+[project]
+name = "eval-realism-judge-feature-analysis"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "inspect-petri @ git+https://github.com/safety-research/petri",
+    "anthropic",
+]
