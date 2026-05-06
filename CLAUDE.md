@@ -3,8 +3,10 @@
 Systematic decomposition of what Petri's LLM realism judge responds to.
 
 ## Project Plan and Logs
+
 - `project-plan.md` is the live source of truth for the project plan, experimental design, current status, and next steps.
 - As we make progress, update `project-plan.md` with new progress or updates to the project plan.
+- As we make progress, update the steps to run in `README.md` 
 - As we make progress, add research log notes in `docs/research-log.md`, especially to track progress milestones and decisions made.
 - If you update `project-plan.md`, always add a brief summary of the change in `docs/research-log.md`
 - Do not modify previous logs unless explicity asked.
@@ -26,5 +28,7 @@ The `docs/` directory and `plans/` directory contain files the user edits in par
 - `project-plan.md` — top-level plan (user-owned; Claude edits only on request)
 
 ## Writing
+
 - When writing text, be concise. 
 - Leave out information that is implied, obvious, or unnessecary.
+
