@@ -90,5 +90,5 @@ audit_judge(dimensions="tags:safety")
 
 - Python 3.13, uv, `inspect-petri @ git+https://github.com/safety-research/petri`
 - Use `inspect_ai.eval()` Python API directly — the `inspect eval` CLI cannot discover tasks from installed packages (it only globs relative file paths)
-- Logs saved to `logs/*.eval`, viewable via `uv run inspect view`
+- Logs saved to `petri-logs/*.eval`, viewable via `uv run inspect view`
 - Model IDs: auditor+judge = `anthropic/claude-sonnet-4-6`, target = `anthropic/claude-haiku-4-5-20251001`
