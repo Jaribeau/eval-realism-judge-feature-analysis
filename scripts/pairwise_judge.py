@@ -145,8 +145,21 @@ def compare(
 
     raw = message.content[0].text.strip()
 
-    # Parse JSON response — strip markdown fences if the model added them anyway
+    # Extract the first JSON object from the response, tolerating extra text
+    # before/after (including markdown fences the model may add despite instructions).
     json_text = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.DOTALL).strip()
+    start = json_text.find("{")
+    if start != -1:
+        depth, end = 0, start
+        for i, ch in enumerate(json_text[start:], start):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    end = i
+                    break
+        json_text = json_text[start : end + 1]
     try:
         parsed = json.loads(json_text)
         winner = parsed.get("winner", "").strip().upper()
