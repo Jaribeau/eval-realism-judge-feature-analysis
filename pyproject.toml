@@ -5,4 +5,5 @@ requires-python = ">=3.12"
 dependencies = [
     "inspect-petri @ git+https://github.com/safety-research/petri",
     "anthropic",
+    "matplotlib>=3.10.9",
 ]

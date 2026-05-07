@@ -6,3 +6,6 @@ docs/notes/scratchpad.md
 generated-transcripts/
 judge-results/
 petri-logs/
+logs/*
+*/__pycache__/*
+Untitled.base
